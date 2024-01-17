@@ -13,7 +13,7 @@ const Noticia = ({ noticia }) => {
 		<Grid
 			item
 			md={6}
-			lg={3}
+			lg={6}
 		>
 			{urlToImage && (
 				<Card>
@@ -22,23 +22,40 @@ const Noticia = ({ noticia }) => {
 						alt={`imagen de la noticia ${title}`}
 						image={urlToImage}
 						height={250}
+						sx={{ cursor: 'pointer' }}
 					/>
-					<CardContent>
+					<CardContent sx={{ paddingTop: 5, paddingLeft: 5, paddingRight: 5 }}>
 						<Typography
 							variant="body1"
 							color="error"
+							marginBottom="12px"
 						>
 							{source.name}
 						</Typography>
 						<Typography
 							variant="h5"
 							component="div"
+							marginBottom="20px"
 						>
 							{title}
 						</Typography>
-						<Typography variant="body2">{description}</Typography>
+						<Typography
+							variant="body2"
+							marginBottom="20px"
+						>
+							{description}
+						</Typography>
 						<CardActions>
-							<Link href={url}>Leer Noticia</Link>
+							<Link
+								href={url}
+								target="_blank"
+								variant="button"
+								width="100%"
+								textAlign="center"
+								sx={{ textDecoration: 'none' }}
+							>
+								Leer Noticia
+							</Link>
 						</CardActions>
 					</CardContent>
 				</Card>

@@ -19,13 +19,13 @@ const CATEGORIAS = [
 ];
 
 const Form = () => {
-	const { categoria, handleChangeCategoria } = useNoticias();
+	const { categoria, handleChangeCategoria, handleSubmit } = useNoticias();
 	return (
-		<form action="">
+		<form onSubmit={handleSubmit}>
 			<FormControl fullWidth>
-				<InputLabel>Categoria</InputLabel>
+				<InputLabel>Categoría</InputLabel>
 				<Select
-					label="Categoria"
+					label="Categoría"
 					onChange={handleChangeCategoria}
 					value={categoria}
 				>
@@ -42,8 +42,9 @@ const Form = () => {
 					<Button
 						fullWidth
 						color="primary"
+						type="submit"
 					>
-						Buscar Noticias
+						Buscar noticias
 					</Button>
 				</Box>
 			</FormControl>
