@@ -14,6 +14,7 @@ function App() {
 						component="h1"
 						align="center"
 						marginY={5}
+						fontSize="4rem"
 					>
 						Buscador de noticias
 					</Typography>
