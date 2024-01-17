@@ -24,7 +24,9 @@ const Noticia = ({ noticia }) => {
 						height={250}
 						sx={{ cursor: 'pointer' }}
 					/>
-					<CardContent sx={{ paddingTop: 5, paddingLeft: 5, paddingRight: 5 }}>
+					<CardContent
+						sx={{ paddingTop: 4, paddingLeft: 2, paddingRight: 1.4 }}
+					>
 						<Typography
 							variant="body1"
 							color="error"
@@ -36,6 +38,7 @@ const Noticia = ({ noticia }) => {
 							variant="h5"
 							component="div"
 							marginBottom="20px"
+							textAlign="left"
 						>
 							{title}
 						</Typography>
